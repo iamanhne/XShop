@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+}
+.light {
+    --textcolor: #333;
+    --backgroundColor: #fff;
+    --activeColor: red;
+    --aftercolor: #cccccccc;
+}
+.dark {
+    --textcolor: #fff;
+    --backgroundColor:#333 ;
+    --activeColor: rgb(90, 227, 231);
+    --aftercolor: #f7f1f1cc;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    animation: modalFadeIn ease-in-out 0.6s;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    display: block;
+    width: 500px;
+    height: 478px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.nameandphone {
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+.nameandphone input,.address input, .option_country input  {
+    margin-top: 5px;
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+.nameandphone #name {
+    flex: 1;
+    margin-right: 5px;
+}
+.nameandphone #phone {
+    flex:1;
+    margin-left: 5px;
+}
+.address input, .option_country input {
+    width: 100%;
+}
+.option_country {
+    position: relative;
+}
+.address-container {
+    justify-content: space-between;
+    position: relative;
+}
+.address-container .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--textcolor);
+    background-color: var(--backgroundColor);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    flex: 1;
+}
+.tab-item.active {
+    opacity: 1;
+}
+.address-chitiet {
+    display: none;
+}
+.address-chitiet.activePane {
+    display: block;
+}

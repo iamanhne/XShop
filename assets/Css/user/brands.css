@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+}
+.light {
+    --textcolor: #333;
+    --backgroundColor: #fff;
+    --activeColor: red;
+    --aftercolor: #cccccccc;
+}
+.dark {
+    --textcolor: #fff;
+    --backgroundColor:#333 ;
+    --activeColor: rgb(90, 227, 231);
+    --aftercolor: #f7f1f1cc;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*------------------ Cartegory -----------------*/
+a {
+    color: var(--textcolor);
+}
+.icon-next {
+    margin: 0 10px;
+}
+.cartegory {
+    padding: 100px 0 0;
+    margin: 0 70px;
+}
+.cartegory-top {
+    margin-bottom: 50px;
+}
+.cartegory-top p {
+    color: var(--textcolor);
+    margin: 0 12px;
+    font-size: 1rem;
+}
+.cartegory-left {
+    width: 20%;
+}
+.cartegory-left ul li {
+    padding: 15px 0;
+}
+.cartegory-left li>a {
+    color: var(--textcolor);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.cartegory-right {
+    width: 80%;
+}
+.cartegory-right-top-item:first-child {
+    flex: 2;
+    font-size: 1rem;
+}
+.cartegory-right-top-item {
+    flex:1;
+    padding: 0 12px;
+}
+.cartegory-right-top-item p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.cartegory-right-top-item button, .cartegory-right-top-item select {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundColor);
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+.cartegory-right-content {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.cartegory-right-content-item {
+    width: 300px;
+    text-align: center;
+    padding: 12px 0;
+    margin-bottom: 50px;
+}
+.cartegory-right-content-item img {
+    display: block;
+    width: 100%;
+}
+.cartegory-right-content-item h1 {
+    font-size: 1rem;
+    margin: 6px 0;
+    color: var(--textcolor);
+}
+.cartegory-right-bottom {
+    justify-content: space-between;
+    margin: 30px 0 20px;
+    width: 100%;
+}
+.item-container {
+    cursor: pointer;
+}

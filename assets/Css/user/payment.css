@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+}
+.light {
+    --textcolor: #333;
+    --backgroundColor: #fff;
+    --activeColor: red;
+    --aftercolor: #cccccccc;
+}
+.dark {
+    --textcolor: #fff;
+    --backgroundColor:#333 ;
+    --activeColor: rgb(90, 227, 231);
+    --aftercolor: #f7f1f1cc;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.delivery {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    animation: modalFadeIn ease-in-out 0.6s;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.delivery-container {
+    display: block;
+    width: 500px;
+    height: 480px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.delivery-form {
+    margin-bottom: 1rem;
+}
+.delivery-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.QR-payment {
+    display: none;
+}
+.confirm-payment button {
+    margin: 20px 5px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: none;
+    font-size: 1.05rem;
+}
+.confirm-payment button:last-child {
+    background-color: #ee4d2d;
+    color: #fff;
+    border-radius: 5px;
+}
+.confirm-payment button:last-child:hover {
+    background-color: #f56549;
+}

@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+}
+.light {
+    --textcolor: #333;
+    --backgroundColor: #fff;
+    --activeColor: red;
+    --aftercolor: #cccccccc;
+}
+.dark {
+    --textcolor: #fff;
+    --backgroundColor:#333 ;
+    --activeColor: rgb(90, 227, 231);
+    --aftercolor: #f7f1f1cc;
+}
+body {
+    background-color: #f5f5f5;
+}
+.cart {
+    margin-top: 80px;
+}
+td img {
+    width: 100px;
+    height: 100px;
+}
+.cart-content-top table{
+    width: 90%;
+    margin: 70px;   
+    background-color: #fff;
+}
+.cart-content-top table th {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 15px 15px 25px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+.cart-content-top table td {
+    text-align: center;
+    padding: 20px 0 15px 0;
+    border-bottom: 1px solid #dddddd;
+}
+.unit-price {
+    color: #ee4d2d;
+}
+.deleteButton {
+    border: none;
+    background:none;
+    cursor: pointer;
+}
+td button:hover {
+    color: #ee4d2d;
+}
+.container-type {
+    position: relative;
+}
+.chooseType {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background: none;
+}
+.chooseType span {
+    font-size: 1.05rem;
+}
+.selection {
+    right: -1.25rem;
+    position: absolute;
+    top: 70%;
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(97, 96, 96, 0.5);
+    display: none;
+}
+.selection .inner {
+    position: absolute;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -3%;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+}
+.selection .size-item li, .selection .type-item li{
+    padding: 5px 10px;
+    border: 1px solid #333;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.selection .size-item li:hover , .selection .type-item li:hover {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+}
+.confirm {
+    display: flex;
+}
+.confirm button {
+    margin: 20px 5px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: none;
+    font-size: 1.05rem;
+}
+.deleteButton, .unit-price ,.price, .cart-content-mid .mid-top button a,
+ .cart-content-mid .mid-top>span, .cart-content-mid table td {
+    font-size: 1.05rem;
+}
+.confirm button:last-child {
+    background-color: #ee4d2d;
+    color: #fff;
+    border-radius: 5px;
+}
+.confirm button:last-child:hover {
+    background-color: #f56549;
+}
+.checkShow {
+    display: block;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+.cart-content-mid {
+    align-items: center;
+    background: #fff;
+    box-sizing: border-box;
+    display: grid;
+    flex: 1;
+    font-size: 1rem;
+    grid-template-columns: 1fr 20.3125rem 11.875rem;
+    margin-top: .75rem;
+    width: 90%;
+    height: 180px;
+    margin: 20px 70px;
+}
+.cart-content-mid {
+    position: sticky;
+    z-index: 2;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 15px 25px;
+}
+.box-shadow {
+    box-shadow: 0px 10px 10px -5px rgba(211, 208, 208, 0.5), 0px -10px 10px -5px rgba(211, 208, 208, 0.5);
+}
+.cart-content-mid .mid-top, .cart-content-mid .mid-mid, .cart-content-mid .mid-bottom {
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+.col1>.deleteButton {
+    margin-left: 50px;
+}
+.col1>.chooseAll {
+    margin-left: 80px;
+}
+.cart-content-mid .mid-top {
+    justify-content: flex-end;
+    align-items: center;
+}
+.cart-content-mid .mid-top button {
+    border: none;
+    background: none;
+    margin: 0 40px 0 100px;
+}
+
+.cart-content-mid .mid-top button a {
+    cursor: pointer;
+}
+.cart-content-mid table {
+    width: 100%;
+}
+.cart-content-mid .col2 {
+    text-align: end;
+}
+.cart-content-mid .mid-bottom .pay-merch {
+    border: none;
+    background-color: #ee4d2d;
+    color: #fff;
+    padding: 10px 30px;
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.cartegory-right-content .more {
+    margin: 70px 70px 0 70px;
+    text-transform: uppercase;
+}
+.cart-content-bottom {
+    display: flex;
+    margin: 10px 70px;
+    justify-content: space-between;
+}
+.cart-content-bottom>.cartegory-right-content-item {
+    margin: 10px;
+}
+.click {
+    display: flex;
+    justify-content: center;
+}
+.selection .size-item .after_choose.active_choose {
+    background-color: #ee4d2d;
+    color: var(--backgroundColor);
+    border: none;
+}
+.noti-container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: modalFadeIn ease-in-out 0.6s;
+    z-index: 3;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.notification {
+    display: block;
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.notification .warn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.warn .icon-notify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid #beb9b9;
+    margin-bottom: 10px;
+}
+.icon-notify i {
+    font-size: 1.5rem;
+}
+.warn .content-notify {
+    width: 100%;
+}
+.content-notify span {
+    text-align: center;
+    font-size: 1.1rem;
+}
+.re_confirm button {
+    margin: 20px 5px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: none;
+    font-size: 1.05rem;
+}
+.re_confirm button:last-child {
+    background-color: #ee4d2d;
+    color: #fff;
+    border-radius: 5px;
+}
+.re_confirm button:last-child:hover {
+    background-color: #f56549;
+}
